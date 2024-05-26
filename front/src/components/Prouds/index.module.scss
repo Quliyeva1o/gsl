@@ -1,0 +1,59 @@
+.prouds{
+    padding: 120px 0;
+    h1{
+        font-weight: 400;
+        font-size: 60px;
+        font-family: "Epilogue";
+    }
+    .cards {
+    display: flex;
+    flex-wrap: wrap;
+    >div{
+        padding: 10px;
+    }
+    .card {
+        display: flex !important;
+        border: 0.1rem solid #dbd5c8;
+        border-radius: 1.5rem;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        height: 120px;
+        img {
+            width: 80px;
+        }
+        .name {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            h5 {
+                font-size: 22px;
+                font-weight: 500;
+                font-family: "Epilogue";
+            }
+            span {
+                font-size: 13px;
+                font-weight: 400;
+                color: #949494;
+                font-family: "Epilogue";
+            }
+        }
+        .bal {
+            h1 {
+                color: #126534;
+                font-size: 36px;
+                font-weight: 600;
+                font-family: "Epilogue";
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #8a8a8a;
+                    font-family: "Epilogue";
+                }
+            }
+        }
+    }
+}
+}

@@ -1,5 +1,5 @@
 .ticket {
-    background-image: linear-gradient(45deg, #d8d254 0%, #d6cf89 100%);
+    background-image: linear-gradient(45deg, #952ad8 0%, #6b0aa8 100%);
     background-repeat: no-repeat;
     >div{
         padding-top: 100px ;
@@ -15,6 +15,7 @@
         font-family: "Epilogue";
         margin: 200px;
         align-items: center;
+        color: #fff;
     }
     form {
         background-color: #fff;
@@ -43,13 +44,13 @@
             border-radius: 5px 5px 5px 5px;
         }
         button {
-            color: #000;
+            color: #fff;
             font-size: 17px;
             padding-left: 30px;
             padding-right: 30px;
             border: 0 solid;
             border-radius: 5px 5px 5px 5px;
-            background-color: #d8d254;
+            background-color: #6b0aa8;
             align-self: center;
             display: flex;
             justify-content: center;
