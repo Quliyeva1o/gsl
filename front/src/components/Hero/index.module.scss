@@ -1,0 +1,32 @@
+.hero {
+    margin: 300px auto 200px;
+    h1 {
+        font-size: 51px;
+        color: #111827;
+        text-align: center;
+        font-weight: 600;
+    }
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 40px;
+        span {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
+            text-decoration: none;
+            justify-content: center;
+            border-radius: 1e3px 1e3px 1e3px 1e3px;
+            border-width: 0;
+            background-color: #d8d254;
+            font-size: 16px;
+            color: #000;
+            line-height: 24px;
+            width: auto;
+            font-weight: 500;
+            text-shadow: none;
+        }
+    }
+}

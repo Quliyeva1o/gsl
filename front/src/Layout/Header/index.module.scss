@@ -1,0 +1,47 @@
+
+.head {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 888;
+    .header {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        a {
+            font-family: "Epilogue";
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            font-size: 28px;
+        }
+        span {
+            font-family: "Epilogue";
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: capitalize;
+            background: none;
+            color: #000;
+            border: 1px solid #dadce2;
+            background-color: #fff;
+            font-weight: 600;
+            border-radius: 100px 100px 100px 100px;
+            padding-top: 12px;
+            padding-bottom: 10px;
+            padding-left: 24px;
+            padding-right: 24px;
+            margin-right: 16px;
+        }
+        div {
+            align-items: center;
+            display: flex;
+        }
+        .logodiv {
+            line-height: 38px;
+            margin: 1.3rem 0;
+        }
+    }
+}

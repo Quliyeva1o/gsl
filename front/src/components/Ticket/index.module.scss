@@ -1,0 +1,62 @@
+.ticket {
+    background-image: linear-gradient(45deg, #d8d254 0%, #d6cf89 100%);
+    background-repeat: no-repeat;
+    >div{
+        padding-top: 100px ;
+        padding-bottom: 100px;
+
+    }
+    div{
+        align-items: center;
+    }
+    h1{
+        font-size: 64px;
+        font-weight: 600;
+        font-family: "Epilogue";
+        margin: 200px;
+        align-items: center;
+    }
+    form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px 10px 10px 10px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        background-repeat: no-repeat;
+        padding-left: 30px;
+        padding-right: 30px;
+        label {
+            display: block;
+            color: #171a21;
+            font-size: 16px;
+            padding-bottom: 10px;
+            margin-top: 12px;
+        }
+        input {
+            width: 300px;
+            color: #171a21;
+            font-size: 14px;
+            padding-left: 15px;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px 5px 5px 5px;
+        }
+        button {
+            color: #000;
+            font-size: 17px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 0 solid;
+            border-radius: 5px 5px 5px 5px;
+            background-color: #d8d254;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background-repeat: no-repeat;
+            margin-top: 16px;
+        }
+    }
+}
