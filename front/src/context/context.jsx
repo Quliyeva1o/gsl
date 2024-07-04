@@ -6,10 +6,7 @@ import { getAll } from "../API/requests";
 
 const ContextProvider = ({ children }) => {
     const [items, setItems] = useState([]);
-    // const localBasket = JSON.parse(localStorage.getItem("basket"));
-    // const localWish = JSON.parse(localStorage.getItem("wishList"));
-    // const [basket, setBasket] = useState(localBasket ? localBasket : []);
-    // const [wishList, setWishList] = useState(localWish ? localWish : []);
+  
     useEffect(() => {
         getAll().then((res) => {
             setItems(res.data);
