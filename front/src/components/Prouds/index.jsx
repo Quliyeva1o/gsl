@@ -17,10 +17,10 @@ const Prouds = () => {
                     <h1>Fəxrlərimiz</h1>
                     <div className={styles.cards}>
                         {
-                            excellents.map((student) => {
+                            excellents.map((student,idx) => {
                                 return (
 
-                                    <div className="col-lg-6 col-md-12 col-sm-12 col-6">
+                                    <div className="col-lg-6 col-md-12 col-sm-12 col-6" key={idx}>
                                         <div className={`${styles.card} `}>
                                             <div className='d-flex'><div className={styles.imgdiv}>   <img src={student.studentPhoto} alt="" /></div>
                                                 <div className={styles.name}><h5>{student.studentName}</h5>

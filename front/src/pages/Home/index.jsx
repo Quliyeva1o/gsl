@@ -1,11 +1,11 @@
 import React from 'react'
 import Hero from '../../components/Hero'
 import About from '../../components/About'
-import Ticket from '../../components/Ticket'
 import Courses from '../../components/Courses'
 import News from '../../components/News'
 import Prouds from '../../components/Prouds'
 import Contact from '../../components/Contanct'
+import Exam from '../../components/Exam'
 
 const Home = () => {
   return (
@@ -14,9 +14,9 @@ const Home = () => {
       <About />
       <Courses />
       <News />
-      <Ticket />
-      <Prouds/>
-      <Contact/>
+      <Exam />
+      <Prouds />
+      <Contact />
     </>
   )
 }

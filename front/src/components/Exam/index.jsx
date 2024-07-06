@@ -5,24 +5,25 @@ import { getAll, getOne } from '../../API/requests';
 import { Select, MenuItem } from '@mui/material';
 import TextField from "@mui/material/TextField";
 import Swal from "sweetalert2";
+import { useGetExamsQuery } from '../../redux/examSlice';
 
-const Ticket = () => {
+const Exam = () => {
     const [exams, setExams] = useState([]);
+    const { data: examm } = useGetExamsQuery();
 
     useEffect(() => {
-        getAll('exam/types?status=0').then((res) => {
-            console.log(res.data);
-            const mappedExams = res.data.map((exam) => ({
+
+        if (examm) {
+            const mappedExams = examm.map((exam) => ({
                 value: exam.token,
                 label: exam.title,
             }));
             setExams(mappedExams);
-
             if (mappedExams.length > 0) {
                 formik.setFieldValue('exam', mappedExams[0].value);
             }
-        });
-    }, []);
+        }
+    }, [examm]);
 
     const formik = useFormik({
         initialValues: {
@@ -33,10 +34,7 @@ const Ticket = () => {
             console.log(values);
             getOne('exam/results', values.student, values.exam).then((res) => {
                 Swal.fire({
-                    // icon: "error",
-                    // title: "Oops...",
                     text: res.data,
-                    // footer: '<a href="#">Why do I have this issue?</a>'
                 });
             }).catch((err) => {
                 console.log(err);
@@ -99,4 +97,4 @@ const Ticket = () => {
     );
 };
 
-export default Ticket;
+export default Exam;
