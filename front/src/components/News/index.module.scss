@@ -6,6 +6,9 @@
         font-weight: 400;
     }
     .cards {
+        a{
+            text-decoration: none;
+        }
         >div{
             padding: 10px;
         }

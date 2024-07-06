@@ -1,4 +1,5 @@
 import Home from "../pages/Home";
+import NewsDetail from "../pages/NewsDetail";
 import NewsPage from "../pages/NewsPage";
 import RootPage from "../pages/RootPage";
 
@@ -12,14 +13,10 @@ export const ROOT = [
                 path: "/news",
                 element: <NewsPage />,
             },
-            // {
-            //     path: "basket",
-            //     element: <Basket />,
-            // },
-            // {
-            //     path: "detail/:id",
-            //     element: <Detail/>,
-            // },
+            {
+                path: "/news/:id",
+                element: <NewsDetail/>,
+            },
             // {
             //     path:"wishlist",
             //     element:<WishList/>

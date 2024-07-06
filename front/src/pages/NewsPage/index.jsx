@@ -3,6 +3,7 @@ import moment from 'moment';
 import styles from './index.module.scss';
 import { useGetNewssQuery } from '../../redux/newsAll';
 import { Pagination } from 'antd';
+import { Link } from 'react-router-dom';
 
 const NewsPage = () => {
     const [newss, setNews] = useState([]);
@@ -28,7 +29,7 @@ const NewsPage = () => {
                 <h1>Xəbərlər</h1>
                 <div className={`${styles.cards} d-flex flex-wrap`}>
                     {currentNews && currentNews.length > 0 && currentNews.map((item) => (
-                        <div key={item.id} className="col-lg-4 col-md-6 col-sm-12">
+                        <div key={item.id} className="col-lg-4 col-md-6 col-sm-12">  <Link to={`/news/${item.id}`}>
                             <div className={`${styles.card} card`}>
                                 <img src={item.title_photo} alt="" />
                                 <div className={styles.text}>
@@ -36,7 +37,9 @@ const NewsPage = () => {
                                     <h3>{item.title}</h3>
                                 </div>
                             </div>
+                        </Link>
                         </div>
+
                     ))}
                 </div>
                 <Pagination
