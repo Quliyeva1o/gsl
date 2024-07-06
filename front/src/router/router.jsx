@@ -1,4 +1,5 @@
 import Home from "../pages/Home";
+import NewsPage from "../pages/NewsPage";
 import RootPage from "../pages/RootPage";
 
 export const ROOT = [
@@ -7,10 +8,10 @@ export const ROOT = [
         element: <RootPage/>,
         children: [
             { index: true, element: <Home /> },
-            // {
-            //     path: "add-page",
-            //     element: <Add />,
-            // },
+            {
+                path: "/news",
+                element: <NewsPage />,
+            },
             // {
             //     path: "basket",
             //     element: <Basket />,

@@ -10,6 +10,7 @@ const Header = () => {
         <div className={styles.logodiv}><Link>tehsilmerkezi.az</Link></div>
         <div className='d-lg-flex d-md-none  d-sm-none d-none'>
           <Link ><span>Niyə biz?</span></Link>
+          <Link to={'/news'}><span>Xəbərlər</span></Link>
           <Link ><span>Bilet Əldə et</span></Link>
           <Link ><span>İmtahan Nəticəsi</span></Link>
           <Link ><span>Bizimlə Əlaqə</span></Link>

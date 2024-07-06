@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import styles from './index.module.scss';
-import { getAll } from '../../API/requests';
-import { useGetNewsQuery } from '../../redux/newsSlice';
+import { useGetNewssQuery } from '../../redux/newsAll';
 
 const News = () => {
   const [newss, setNews] = useState([]);
-  const { data: news } = useGetNewsQuery();
+  const { data: news } = useGetNewssQuery();
 
   useEffect(() => {
     news && setNews(news)
   }, [news]);
-  console.log(newss);
 
   return (
     <div className={styles.news}>
