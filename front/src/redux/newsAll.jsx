@@ -6,8 +6,11 @@ export const newsAPI = createApi({
     endpoints: (builder) => ({
         getNewss: builder.query({
             query: () => `news`,
-        })
+        }),
+        getNewsById: builder.query({
+            query: (id) => `news/${id}`,
+        }),
     }),
 })
 
-export const { useGetNewssQuery } = newsAPI
+export const { useGetNewssQuery ,useGetNewsByIdQuery} = newsAPI

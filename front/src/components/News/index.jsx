@@ -21,7 +21,7 @@ const News = () => {
 
             <div key={item.id} className="col-lg-4 col-md-6 col-sm-12"
             >
-              <Link to={`/${item.id}`}>
+              <Link to={`/news/${item.id}`}>
                 <div className={`${styles.card} card`}>
                   <img src={item.title_photo} alt="" />
                   <div className={styles.text}>
