@@ -1,33 +1,32 @@
 .ticket {
     background-image: linear-gradient(45deg, #952ad8 0%, #6b0aa8 100%);
     background-repeat: no-repeat;
-    >div{
-        padding-top: 100px ;
+    > div {
+        padding-top: 100px;
         padding-bottom: 100px;
-
     }
-    div{
+    div {
         align-items: center;
     }
-    h1{
+    h1 {
         font-size: 64px;
         font-weight: 600;
         font-family: "Epilogue";
         margin: 200px;
         align-items: center;
         color: #fff;
-        @media(max-width:1400px){
+        @media (max-width: 1400px) {
             margin: 80px;
         }
-        @media(max-width:1000px){
+        @media (max-width: 1000px) {
             margin: 30px;
         }
-        @media(max-width:600px){
+        @media (max-width: 600px) {
             margin: 5px;
         }
     }
     form {
-     
+        width: 100%;
         background-color: #fff;
         padding: 30px;
         border-radius: 10px 10px 10px 10px;
@@ -38,7 +37,12 @@
         background-repeat: no-repeat;
         padding-left: 30px;
         padding-right: 30px;
-        span{
+        gap: 10px;
+        div {
+            width: 100%;
+          
+        }
+        span {
             opacity: 2;
             z-index: 777;
         }
@@ -48,7 +52,7 @@
             font-size: 16px;
         }
         input {
-            width: 300px;
+            width: 100%;
             color: #171a21;
             font-size: 14px;
             padding-left: 15px;

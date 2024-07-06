@@ -1,26 +1,68 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from "./index.module.scss"
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import styles from './index.module.scss';
+
 const Header = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
+  const drawer = (
+    <div className={styles.drawer}>
+      <List>
+        <ListItem button component={Link} to="/">
+          <ListItemText primary="Niyə biz?" />
+        </ListItem>
+        <ListItem button component={Link} to="/news">
+          <ListItemText primary="Xəbərlər" />
+        </ListItem>
+        <ListItem button component={Link} to="/">
+          <ListItemText primary="Bilet Əldə et" />
+        </ListItem>
+        <ListItem button component={Link} to="/">
+          <ListItemText primary="İmtahan Nəticəsi" />
+        </ListItem>
+        <ListItem button component={Link} to="/">
+          <ListItemText primary="Bizimlə Əlaqə" />
+        </ListItem>
+      </List>
+    </div>
+  );
+
   return (
     <>
-    <div className={styles.head}>
-      <div className={`container d-flex justify-content-between ${styles.header}`}>
-        <div className={styles.logodiv}><Link>tehsilmerkezi.az</Link></div>
-        <div className='d-lg-flex d-md-none  d-sm-none d-none'>
-          <Link ><span>Niyə biz?</span></Link>
-          <Link to={'/news'}><span>Xəbərlər</span></Link>
-          <Link ><span>Bilet Əldə et</span></Link>
-          <Link ><span>İmtahan Nəticəsi</span></Link>
-          <Link ><span>Bizimlə Əlaqə</span></Link>
-        </div>
-        <div className='d-lg-none d-sm-flex d-sm-flex d-flex '>
-          <MenuIcon />
-        </div>
-      </div></div>
+      <AppBar position="fixed" className={styles.head}>
+        <Toolbar className={styles.header}>
+          <div className={styles.logodiv}>
+            <Link to="/">tehsilmerkezi.az</Link>
+          </div>
+          <div className="d-lg-flex d-md-none d-sm-none d-none">
+            <Link><span>Niyə biz?</span></Link>
+            <Link to="/news"><span>Xəbərlər</span></Link>
+            <Link><span>Bilet Əldə et</span></Link>
+            <Link><span>İmtahan Nəticəsi</span></Link>
+            <Link><span>Bizimlə Əlaqə</span></Link>
+          </div>
+          <IconButton edge="end" color="inherit" aria-label="menu" className="d-lg-none" onClick={handleDrawerToggle}>
+            <MenuIcon  className={styles.menuicon}/>
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
+        {drawer}
+      </Drawer>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

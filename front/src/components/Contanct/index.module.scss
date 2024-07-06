@@ -1,10 +1,13 @@
 .contact {
     margin-bottom: 60px;
-    h1{
+    h1 {
         padding: 20px;
     }
     .df {
         .map {
+            @media (max-width: 576px) {
+                width: 100%;
+            }
             padding: 20px;
             justify-content: center;
             align-items: center;
@@ -15,13 +18,11 @@
         }
         .form {
             padding: 20px;
-          form
-          {
-            >div{
-             
-                margin-bottom: 10px;
+            form {
+                > div {
+                    margin-bottom: 10px;
+                }
             }
-          }
 
             button {
                 color: #fff;

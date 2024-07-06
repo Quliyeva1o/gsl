@@ -17,16 +17,16 @@ const Prouds = () => {
                     <h1>Fəxrlərimiz</h1>
                     <div className={styles.cards}>
                         {
-                            excellents.map((student,idx) => {
+                            excellents.map((student, idx) => {
                                 return (
 
-                                    <div className="col-lg-6 col-md-12 col-sm-12 col-6" key={idx}>
+                                    <div className="col-lg-6 col-md-12 col-sm-12 " key={idx}>
                                         <div className={`${styles.card} `}>
-                                            <div className='d-flex'><div className={styles.imgdiv}>   <img src={student.studentPhoto} alt="" /></div>
+                                            <div className='d-flex align-items-center'><div className={styles.imgdiv}>   <img src={student.studentPhoto} alt="" /></div>
                                                 <div className={styles.name}><h5>{student.studentName}</h5>
                                                     <span> {student.studentDesc}</span></div></div>
                                             <div className={styles.bal}>
-                                                <h1>{student.studentScore} <span>bal</span><span className='d-block'>{student.studentExam}</span></h1>
+                                                <h1><div className={styles.ball}>{student.studentScore} <span>bal</span></div><span className='d-block'>{student.studentExam}</span></h1>
                                             </div>
 
                                         </div></div>

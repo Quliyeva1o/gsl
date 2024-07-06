@@ -1,59 +1,88 @@
-.prouds{
+.prouds {
     padding: 120px 0;
-    h1{
+    h1 {
         font-weight: 400;
         font-size: 60px;
         font-family: "Epilogue";
+        @media (max-width: 576px) {
+            font-size: 30px;
+        }
     }
     .cards {
-    display: flex;
-    flex-wrap: wrap;
-    >div{
-        padding: 10px;
-    }
-    .card {
-        display: flex !important;
-        border: 0.1rem solid #dbd5c8;
-        border-radius: 1.5rem;
-        width: 100%;
-        justify-content: space-between;
-        padding: 10px 20px;
-        align-items: center;
-        height: 120px;
-        img {
-            width: 80px;
-        }
-        .name {
-            justify-content: center;
-            display: flex;
-            flex-direction: column;
-            margin-left: 20px;
-            h5 {
-                font-size: 22px;
-                font-weight: 500;
-                font-family: "Epilogue";
-            }
-            span {
-                font-size: 13px;
-                font-weight: 400;
-                color: #949494;
-                font-family: "Epilogue";
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            padding: 10px;
+            @media (max-width: 576px) {
+                width: 100%;
+                padding: 10px 10;
+                justify-content: space-between;
             }
         }
-        .bal {
-            h1 {
-                color: #126534;
-                font-size: 36px;
-                font-weight: 600;
-                font-family: "Epilogue";
-                span {
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: #8a8a8a;
+        .card {
+            display: flex !important;
+            border: 0.1rem solid #dbd5c8;
+            border-radius: 1.5rem;
+            width: 100%;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            height: 120px;
+            img {
+                width: 80px;
+                @media (max-width: 576px) {
+                    width: 60px;
+                    align-items: center;
+                }
+            }
+            .name {
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                @media (max-width: 576px) {
+                    margin-left: 10px;
+                }
+                h5 {
+                    font-size: 22px;
+                    font-weight: 500;
                     font-family: "Epilogue";
+                    @media (max-width: 576px) {
+                        font-size: 16px;
+                    }
+                }
+                span {
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: #949494;
+                    font-family: "Epilogue";
+                    @media (max-width: 576px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .bal {
+                h1 {
+                    color: #126534;
+                    font-size: 36px;
+                    font-weight: 600;
+                    font-family: "Epilogue";
+                    @media (max-width: 576px) {
+                        font-size: 26px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #8a8a8a;
+                        font-family: "Epilogue";
+                        @media (max-width: 576px) {
+                            font-size: 11px;
+                        }
+                    }
                 }
             }
         }
     }
-}
 }
