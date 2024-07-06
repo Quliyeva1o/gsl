@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import styles from './index.module.scss'
-import { getAll } from '../../API/requests';
+
+import { useGetProudsQuery } from '../../redux/proudsSlice';
 const Prouds = () => {
     const [excellents, setExcellents] = useState([]);
+    const { data: prouds } = useGetProudsQuery();
 
     useEffect(() => {
-        getAll('student/excellents')
-            .then((res) => {
-                setExcellents(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }, []);
+        prouds && setExcellents(prouds)
+    }, [prouds]);
+
     return (
         <>
             <div className={styles.prouds}>
