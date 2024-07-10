@@ -27,12 +27,15 @@ const Footer = () => {
             <div className='d-flex'>
               <span><EmailIcon /></span>
               <a href="#">
-                Elektron-poçt:<br />tehsilmerkezi.az@gmail.com
+                Elektron-poçt:<br />gsl.edu.az@gmail.com
               </a></div>
             <br />
-            
+            <div className='d-flex'>
               <span><InstagramIcon /></span>
-            
+              <a href="#">
+                sosial-media:<br />gsl.edu.az
+              </a>
+            </div>
           </div>
         </div>
       </div>

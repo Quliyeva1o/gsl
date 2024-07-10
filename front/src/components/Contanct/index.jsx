@@ -27,7 +27,7 @@ const Contact = () => {
         onSubmit: values => {
             formik.resetForm()
             postOne('student/contact', values).then((res) => {
-                // console.log(res)
+              
                 Swal.fire({
                     icon: "success",
                     text: res.data,
@@ -39,7 +39,7 @@ const Contact = () => {
     });
 
     return (
-        <div className={styles.contact}>
+        <div className={styles.contact} id="contact-section">
             <div className="container">
                 <h1>Contact</h1>
                 <div className={`d-flex flex-wrap ${styles.df}`}>

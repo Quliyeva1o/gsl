@@ -17,6 +17,13 @@ const Header = () => {
     setDrawerOpen(!drawerOpen);
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const drawer = (
     <div className={styles.drawer}>
       <List>
@@ -32,7 +39,7 @@ const Header = () => {
         <ListItem button component={Link} to="/">
           <ListItemText primary="İmtahan Nəticəsi" />
         </ListItem>
-        <ListItem button component={Link} to="/">
+        <ListItem button onClick={scrollToContact}>
           <ListItemText primary="Bizimlə Əlaqə" />
         </ListItem>
       </List>
@@ -44,14 +51,14 @@ const Header = () => {
       <AppBar position="fixed" className={styles.head}>
         <Toolbar className={styles.header}>
           <div className={styles.logodiv}>
-            <Link to="/">tehsilmerkezi.az</Link>
+            <Link to="/">gsl.edu.az</Link>
           </div>
           <div className="d-lg-flex d-md-none d-sm-none d-none">
             <Link><span>Niyə biz?</span></Link>
             <Link to="/news"><span>Xəbərlər</span></Link>
-            <Link><span>Bilet Əldə et</span></Link>
-            <Link><span>İmtahan Nəticəsi</span></Link>
-            <Link><span>Bizimlə Əlaqə</span></Link>
+            {/* <Link><span>Bilet Əldə et</span></Link> */}
+            <Link to={"https://netice.gsl.edu.az/"}><span>İmtahan Nəticəsi</span></Link>
+            <Link onClick={scrollToContact}><span>Bizimlə Əlaqə</span></Link>
           </div>
           <IconButton edge="end" color="inherit" aria-label="menu" className="d-lg-none" onClick={handleDrawerToggle}>
             <MenuIcon  className={styles.menuicon}/>

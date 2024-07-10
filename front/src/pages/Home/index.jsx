@@ -16,7 +16,7 @@ const Home = () => {
       <News />
       <Exam />
       <Prouds />
-      <Contact />
+      <Contact/>
     </>
   )
 }

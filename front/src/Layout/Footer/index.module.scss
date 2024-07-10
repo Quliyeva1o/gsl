@@ -7,6 +7,7 @@
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 30px;
+            font-family: 'Epilogue';
         }
         input {
             background-color: #fff;
@@ -16,27 +17,42 @@
             border: 2px solid;
             border-radius: 100px 100px 100px 100px;
             width: 300px;
+          
+        }
+        label{
+            font-family: 'Epilogue';
+            color: #171a21!important;
+        }
+        fieldset {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            border-color: transparent!important;
         }
         button {
-            color: #fff;
+            color: #6b0aa8;
             font-size: 18px;
+            font-weight: 500;
             padding-left: 30px;
             padding-right: 30px;
+            font-family: 'Epilogue';
             border: 0 solid;
             border-radius: 100px 100px 100px 100px;
-            background-color: #d8d254;
+            background-color: #fff;
             width: 150px;
             margin-left: 10px;
         }
         h3 {
             color: #fff;
+            font-family: 'Epilogue';
         }
         a {
             color: #fff;
+            font-family: 'Epilogue';
             text-decoration: none;
             padding-left: 10px;
         }
-        svg{
+        svg {
             color: #fff;
         }
     }
