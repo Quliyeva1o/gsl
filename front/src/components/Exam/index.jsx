@@ -6,11 +6,15 @@ import { Select, MenuItem } from '@mui/material';
 import TextField from "@mui/material/TextField";
 import Swal from "sweetalert2";
 import { useGetExamsQuery } from '../../redux/examSlice';
+import * as yup from 'yup'; 
 
 const Exam = () => {
     const [exams, setExams] = useState([]);
     const { data: examm } = useGetExamsQuery();
-
+    const validationSchema = yup.object({
+        exam: yup.string().required('İmtahanı seçməlisiniz'),
+        student: yup.string().required('İş nömrəsi mütləqdir'),
+    });
     useEffect(() => {
 
         if (examm) {
@@ -30,6 +34,8 @@ const Exam = () => {
             exam: '',
             student: '',
         },
+        validationSchema: validationSchema, 
+
         onSubmit: (values) => {
             console.log(values);
             getOne('exam/results', values.student, values.exam).then((res) => {
@@ -46,7 +52,7 @@ const Exam = () => {
     return (
         <>
             {exams.length > 0 && (
-                <div className={styles.ticket}>
+                <div className={styles.exam} id='exam-section'>
                     <div className="container d-lg-flex justify-content-between ">
                         <div>
                             <h1>İmtahan nəticəsini sürətli öyrən</h1>

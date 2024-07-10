@@ -1,4 +1,4 @@
-.ticket {
+.exam {
     background-image: linear-gradient(45deg, #952ad8 0%, #6b0aa8 100%);
     background-repeat: no-repeat;
     > div {
@@ -23,6 +23,8 @@
             margin: 30px;
         }
         @media (max-width: 600px) {
+            font-size: 44px;
+
             margin: 5px;
         }
     }

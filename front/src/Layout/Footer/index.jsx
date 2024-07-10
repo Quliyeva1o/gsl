@@ -17,7 +17,7 @@ const Footer = () => {
               <button><span>Göndər</span></button>
             </div>
           </div>
-          <div>
+          <div className={styles.eelaqee}>
             <h3>Əlaqə:</h3>
             <div className="d-flex">  <span> <PhoneEnabledIcon /></span>
               <div> <a href="#">

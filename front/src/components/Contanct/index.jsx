@@ -7,11 +7,11 @@ import { postOne } from '../../API/requests';
 import Swal from "sweetalert2";
 
 const validationSchema = yup.object({
-    title: yup.string().required('Title is required'),
-    description: yup.string().required('Description is required'),
-    name: yup.string().required('Name is required'),
-    phone: yup.string().required('Phone is required'),
-    email: yup.string().email('Invalid email address').required('Email is required'),
+    title: yup.string().required('Başlıq hissəsi boş qala bilməz!'),
+    description: yup.string().required('Təsvir hissəsi boş qala bilməz!'),
+    name: yup.string().required('Ad hissəsi boş qala bilməz!'),
+    phone: yup.string().required('Telefon hissəsi boş qala bilməz!'),
+    email: yup.string().email('Yanlış email ünvanı').required('Email hissəsi boş qala bilməz!'),
 });
 
 const Contact = () => {

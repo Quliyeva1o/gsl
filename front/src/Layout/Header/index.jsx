@@ -20,21 +20,30 @@ const Header = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      const contactSectionposition = contactSection.offsetTop - 100; 
+      window.scrollTo({ top: contactSectionposition, behavior: 'smooth' });
+    }
+  };
+
+  const scrollToExam = () => {
+    const examSection = document.getElementById('exam-section');
+    if (examSection) {
+      const examSectionPosition = examSection.offsetTop - 100; 
+      window.scrollTo({ top: examSectionPosition, behavior: 'smooth' });
     }
   };
 
   const drawer = (
     <div className={styles.drawer}>
       <List>
-        <ListItem button component={Link} to="/">
+        {/* <ListItem button component={Link} to="/">
           <ListItemText primary="Niyə biz?" />
-        </ListItem>
+        </ListItem> */}
         <ListItem button component={Link} to="/news">
           <ListItemText primary="Xəbərlər" />
         </ListItem>
-        <ListItem button component={Link} to="/">
-          <ListItemText primary="Bilet Əldə et" />
+        <ListItem button  onClick={scrollToExam}>
+          <ListItemText primary="Imtahan Nəticəsinə Sürətli Bax" />
         </ListItem>
         <ListItem button component={Link} to="/">
           <ListItemText primary="İmtahan Nəticəsi" />
@@ -54,9 +63,9 @@ const Header = () => {
             <Link to="/">gsl.edu.az</Link>
           </div>
           <div className="d-lg-flex d-md-none d-sm-none d-none">
-            <Link><span>Niyə biz?</span></Link>
+            {/* <Link><span>Niyə biz?</span></Link> */}
             <Link to="/news"><span>Xəbərlər</span></Link>
-            {/* <Link><span>Bilet Əldə et</span></Link> */}
+            <Link onClick={scrollToExam}><span>Imtahan Nəticəsinə Sürətli Bax</span></Link>
             <Link to={"https://netice.gsl.edu.az/"}><span>İmtahan Nəticəsi</span></Link>
             <Link onClick={scrollToContact}><span>Bizimlə Əlaqə</span></Link>
           </div>

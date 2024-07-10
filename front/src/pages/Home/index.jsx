@@ -14,9 +14,9 @@ const Home = () => {
       <About />
       <Courses />
       <News />
-      <Exam />
+      <Exam id='exam-section' />
       <Prouds />
-      <Contact/>
+      <Contact id='contact-section' />
     </>
   )
 }
