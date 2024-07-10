@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 const validationSchema = yup.object({
     title: yup.string().required('Başlıq hissəsi boş qala bilməz!'),
-    description: yup.string().required('Təsvir hissəsi boş qala bilməz!'),
+    description: yup.string().required('Müraciət hissəsi boş qala bilməz!'),
     name: yup.string().required('Ad hissəsi boş qala bilməz!'),
     phone: yup.string().required('Telefon hissəsi boş qala bilməz!'),
     email: yup.string().email('Yanlış email ünvanı').required('Email hissəsi boş qala bilməz!'),
@@ -52,7 +52,7 @@ const Contact = () => {
                                 fullWidth
                                 id="title"
                                 name="title"
-                                label="Title"
+                                label="Başlıq"
                                 variant="outlined"
                                 value={formik.values.title}
                                 onChange={formik.handleChange}
@@ -66,7 +66,7 @@ const Contact = () => {
                                 rows={4}
                                 id="description"
                                 name="description"
-                                label="Description"
+                                label="Müraciət mətni"
                                 variant="outlined"
                                 value={formik.values.description}
                                 onChange={formik.handleChange}
@@ -78,7 +78,7 @@ const Contact = () => {
                                 fullWidth
                                 id="name"
                                 name="name"
-                                label="Name"
+                                label="Ad Soyad"
                                 variant="outlined"
                                 value={formik.values.name}
                                 onChange={formik.handleChange}
@@ -90,7 +90,7 @@ const Contact = () => {
                                 fullWidth
                                 id="phone"
                                 name="phone"
-                                label="Phone"
+                                label="Əlaqə Nömrəsi"
                                 variant="outlined"
                                 value={formik.values.phone}
                                 onChange={formik.handleChange}
