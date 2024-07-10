@@ -43,13 +43,13 @@ const Header = () => {
           <ListItemText primary="Xəbərlər" />
         </ListItem>
         <ListItem button  onClick={scrollToExam}>
-          <ListItemText primary="Imtahan Nəticəsinə Sürətli Bax" />
+          <ListItemText onClick={scrollToExam} primary="Imtahan Nəticəsinə Sürətli Bax" />
         </ListItem>
-        <ListItem button component={Link} to="/">
+        <ListItem button component={Link} to={"https://netice.gsl.edu.az/"}>
           <ListItemText primary="İmtahan Nəticəsi" />
         </ListItem>
         <ListItem button onClick={scrollToContact}>
-          <ListItemText primary="Bizimlə Əlaqə" />
+          <ListItemText onClick={scrollToContact} primary="Bizimlə Əlaqə" />
         </ListItem>
       </List>
     </div>
