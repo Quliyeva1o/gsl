@@ -30,6 +30,7 @@ const Header = () => {
     if (examSection) {
       const examSectionPosition = examSection.offsetTop - 100; 
       window.scrollTo({ top: examSectionPosition, behavior: 'smooth' });
+     
     }
   };
 
