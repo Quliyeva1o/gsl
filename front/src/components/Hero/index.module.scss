@@ -1,5 +1,11 @@
 .hero {
     margin: 300px auto 200px;
+    @media (max-width: 1000px) {
+        margin: 300px auto 100px;
+    }
+    @media (max-width: 600px) {
+        margin: 300px auto 50px;
+    }
     .div {
         margin: 0 auto;
         text-align: center;

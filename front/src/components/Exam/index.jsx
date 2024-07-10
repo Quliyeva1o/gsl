@@ -49,7 +49,7 @@ const Exam = () => {
                 <div className={styles.ticket}>
                     <div className="container d-lg-flex justify-content-between ">
                         <div>
-                            <h1>İmtahan biletini əldə et!</h1>
+                            <h1>İmtahan nəticəsini sürətli öyrən</h1>
                         </div>
                         <div>
                             <form action="" onSubmit={formik.handleSubmit} className={styles.form}>
